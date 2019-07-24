@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		9810416D22E8664100AEF80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9810416C22E8664100AEF80E /* AppDelegate.swift */; };
-		9810416F22E8664100AEF80E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9810416E22E8664100AEF80E /* ViewController.swift */; };
 		9810417222E8664100AEF80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9810417022E8664100AEF80E /* Main.storyboard */; };
 		9810417422E8664300AEF80E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9810417322E8664300AEF80E /* Assets.xcassets */; };
 		9810417722E8664300AEF80E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9810417522E8664300AEF80E /* LaunchScreen.storyboard */; };
+		9810418922E867C200AEF80E /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9810418822E867C200AEF80E /* BaseTabBarController.swift */; };
+		9810418B22E867D200AEF80E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9810418A22E867D200AEF80E /* TodayViewController.swift */; };
+		9810418D22E867DC00AEF80E /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9810418C22E867DC00AEF80E /* ForecastViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9810416922E8664100AEF80E /* SimpleWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9810416C22E8664100AEF80E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9810416E22E8664100AEF80E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9810417122E8664100AEF80E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9810417322E8664300AEF80E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9810417622E8664300AEF80E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9810417822E8664300AEF80E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9810418822E867C200AEF80E /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		9810418A22E867D200AEF80E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		9810418C22E867DC00AEF80E /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,112 @@
 		9810416B22E8664100AEF80E /* SimpleWeather */ = {
 			isa = PBXGroup;
 			children = (
-				9810416C22E8664100AEF80E /* AppDelegate.swift */,
-				9810416E22E8664100AEF80E /* ViewController.swift */,
-				9810417022E8664100AEF80E /* Main.storyboard */,
-				9810417322E8664300AEF80E /* Assets.xcassets */,
-				9810417522E8664300AEF80E /* LaunchScreen.storyboard */,
-				9810417822E8664300AEF80E /* Info.plist */,
+				9810418F22E8680700AEF80E /* Support */,
+				9810418E22E867F200AEF80E /* Storyboards */,
+				9810418422E8678800AEF80E /* Entities */,
+				9810418322E8677900AEF80E /* Views */,
+				9810418222E8675F00AEF80E /* Scenes */,
+				9810418122E8675800AEF80E /* Resources */,
+				9810418022E8675100AEF80E /* Extensions */,
+				9810417F22E8674A00AEF80E /* Services */,
+				9810417E22E8673F00AEF80E /* Utils */,
 			);
 			path = SimpleWeather;
+			sourceTree = "<group>";
+		};
+		9810417E22E8673F00AEF80E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9810417F22E8674A00AEF80E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9810418022E8675100AEF80E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9810418122E8675800AEF80E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9810417322E8664300AEF80E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9810418222E8675F00AEF80E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9810418522E8679200AEF80E /* Base */,
+				9810418622E8679800AEF80E /* Today */,
+				9810418722E8679D00AEF80E /* Forecast */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9810418322E8677900AEF80E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9810418422E8678800AEF80E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		9810418522E8679200AEF80E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9810418822E867C200AEF80E /* BaseTabBarController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9810418622E8679800AEF80E /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				9810418A22E867D200AEF80E /* TodayViewController.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		9810418722E8679D00AEF80E /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				9810418C22E867DC00AEF80E /* ForecastViewController.swift */,
+			);
+			path = Forecast;
+			sourceTree = "<group>";
+		};
+		9810418E22E867F200AEF80E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9810417022E8664100AEF80E /* Main.storyboard */,
+				9810417522E8664300AEF80E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9810418F22E8680700AEF80E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				9810416C22E8664100AEF80E /* AppDelegate.swift */,
+				9810417822E8664300AEF80E /* Info.plist */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9810416F22E8664100AEF80E /* ViewController.swift in Sources */,
+				9810418B22E867D200AEF80E /* TodayViewController.swift in Sources */,
+				9810418D22E867DC00AEF80E /* ForecastViewController.swift in Sources */,
 				9810416D22E8664100AEF80E /* AppDelegate.swift in Sources */,
+				9810418922E867C200AEF80E /* BaseTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9LF788ULX;
-				INFOPLIST_FILE = SimpleWeather/Info.plist;
+				INFOPLIST_FILE = SimpleWeather/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P9LF788ULX;
-				INFOPLIST_FILE = SimpleWeather/Info.plist;
+				INFOPLIST_FILE = SimpleWeather/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
