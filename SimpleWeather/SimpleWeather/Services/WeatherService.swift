@@ -10,12 +10,12 @@ import Alamofire
 
 typealias JSONDictionary = [String: Any]
 
-protocol DailyWeatherServiceAdapterProtocol: class {
+protocol WeatherServiceProtocol: class {
     func getDailyWeather(latitude: Double, longitude: Double, onSuccess: @escaping (DailyWeather) -> Void , onFailure: @escaping () -> Void)
     func getForecast(latitude: Double, longitude: Double, onSuccess: @escaping (Forecast) -> Void , onFailure: @escaping () -> Void)
 }
 
-class DailyWeatherServiceAdapter: DailyWeatherServiceAdapterProtocol {
+class WeatherService: WeatherServiceProtocol {
     
     func getDailyWeather(latitude: Double, longitude: Double, onSuccess: @escaping (DailyWeather) -> Void , onFailure: @escaping () -> Void) {
         let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=ea2d8ade8074b377463a35da1ce64e47"
